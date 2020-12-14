@@ -15,6 +15,12 @@
 		FB9D571C2587BA9100B441A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D56F12587BA8F00B441A9 /* ContentView.swift */; };
 		FB9D571D2587BA9100B441A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9D56F22587BA9100B441A9 /* Assets.xcassets */; };
 		FB9D571E2587BA9100B441A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9D56F22587BA9100B441A9 /* Assets.xcassets */; };
+		FB9D57322587CA4800B441A9 /* CourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D57312587CA4800B441A9 /* CourseRow.swift */; };
+		FB9D57332587CA4800B441A9 /* CourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D57312587CA4800B441A9 /* CourseRow.swift */; };
+		FB9D57392587CFBE00B441A9 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D57382587CFBE00B441A9 /* CoursesView.swift */; };
+		FB9D573A2587CFBE00B441A9 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D57382587CFBE00B441A9 /* CoursesView.swift */; };
+		FB9D57402587D37600B441A9 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D573F2587D37600B441A9 /* Sidebar.swift */; };
+		FB9D57412587D37600B441A9 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D573F2587D37600B441A9 /* Sidebar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,9 @@
 		FB9D57122587BA9100B441A9 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9D57162587BA9100B441A9 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		FB9D57182587BA9100B441A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB9D57312587CA4800B441A9 /* CourseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRow.swift; sourceTree = "<group>"; };
+		FB9D57382587CFBE00B441A9 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
+		FB9D573F2587D37600B441A9 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +109,9 @@
 			children = (
 				FB9D56F02587BA8F00B441A9 /* DevCorpsApp.swift */,
 				FB9D56F12587BA8F00B441A9 /* ContentView.swift */,
+				FB9D57312587CA4800B441A9 /* CourseRow.swift */,
+				FB9D57382587CFBE00B441A9 /* CoursesView.swift */,
+				FB9D573F2587D37600B441A9 /* Sidebar.swift */,
 				FB9D56F22587BA9100B441A9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -308,8 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB9D57402587D37600B441A9 /* Sidebar.swift in Sources */,
 				FB9D571B2587BA9100B441A9 /* ContentView.swift in Sources */,
+				FB9D57322587CA4800B441A9 /* CourseRow.swift in Sources */,
 				FB9D57192587BA9100B441A9 /* DevCorpsApp.swift in Sources */,
+				FB9D57392587CFBE00B441A9 /* CoursesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +332,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB9D57412587D37600B441A9 /* Sidebar.swift in Sources */,
 				FB9D571C2587BA9100B441A9 /* ContentView.swift in Sources */,
+				FB9D57332587CA4800B441A9 /* CourseRow.swift in Sources */,
 				FB9D571A2587BA9100B441A9 /* DevCorpsApp.swift in Sources */,
+				FB9D573A2587CFBE00B441A9 /* CoursesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
