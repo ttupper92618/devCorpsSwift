@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AAFE1CF2587F77B0035F4BE /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFE1CE2587F77B0035F4BE /* CourseItem.swift */; };
+		1AAFE1D02587F77B0035F4BE /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFE1CE2587F77B0035F4BE /* CourseItem.swift */; };
+		1AAFE1E42587FA8B0035F4BE /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFE1E32587FA8B0035F4BE /* CourseList.swift */; };
+		1AAFE1E52587FA8B0035F4BE /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFE1E32587FA8B0035F4BE /* CourseList.swift */; };
 		FB9D570C2587BA9100B441A9 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D570B2587BA9100B441A9 /* Tests_iOS.swift */; };
 		FB9D57172587BA9100B441A9 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D57162587BA9100B441A9 /* Tests_macOS.swift */; };
 		FB9D57192587BA9100B441A9 /* DevCorpsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D56F02587BA8F00B441A9 /* DevCorpsApp.swift */; };
@@ -41,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AAFE1CE2587F77B0035F4BE /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
+		1AAFE1E32587FA8B0035F4BE /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
 		FB9D56F02587BA8F00B441A9 /* DevCorpsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevCorpsApp.swift; sourceTree = "<group>"; };
 		FB9D56F12587BA8F00B441A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB9D56F22587BA9100B441A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +98,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AAFE1D52587F98E0035F4BE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FB9D56F12587BA8F00B441A9 /* ContentView.swift */,
+				FB9D573F2587D37600B441A9 /* Sidebar.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		1AAFE1DE2587F9A20035F4BE /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				1AAFE1CE2587F77B0035F4BE /* CourseItem.swift */,
+				FB9D57312587CA4800B441A9 /* CourseRow.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		FB9D56EA2587BA8F00B441A9 = {
 			isa = PBXGroup;
 			children = (
@@ -108,10 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				FB9D56F02587BA8F00B441A9 /* DevCorpsApp.swift */,
-				FB9D56F12587BA8F00B441A9 /* ContentView.swift */,
-				FB9D57312587CA4800B441A9 /* CourseRow.swift */,
+				1AAFE1D52587F98E0035F4BE /* Navigation */,
+				1AAFE1DE2587F9A20035F4BE /* Items */,
 				FB9D57382587CFBE00B441A9 /* CoursesView.swift */,
-				FB9D573F2587D37600B441A9 /* Sidebar.swift */,
+				1AAFE1E32587FA8B0035F4BE /* CourseList.swift */,
 				FB9D56F22587BA9100B441A9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -321,10 +345,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB9D57402587D37600B441A9 /* Sidebar.swift in Sources */,
+				1AAFE1CF2587F77B0035F4BE /* CourseItem.swift in Sources */,
 				FB9D571B2587BA9100B441A9 /* ContentView.swift in Sources */,
 				FB9D57322587CA4800B441A9 /* CourseRow.swift in Sources */,
 				FB9D57192587BA9100B441A9 /* DevCorpsApp.swift in Sources */,
 				FB9D57392587CFBE00B441A9 /* CoursesView.swift in Sources */,
+				1AAFE1E42587FA8B0035F4BE /* CourseList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,10 +359,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB9D57412587D37600B441A9 /* Sidebar.swift in Sources */,
+				1AAFE1D02587F77B0035F4BE /* CourseItem.swift in Sources */,
 				FB9D571C2587BA9100B441A9 /* ContentView.swift in Sources */,
 				FB9D57332587CA4800B441A9 /* CourseRow.swift in Sources */,
 				FB9D571A2587BA9100B441A9 /* DevCorpsApp.swift in Sources */,
 				FB9D573A2587CFBE00B441A9 /* CoursesView.swift in Sources */,
+				1AAFE1E52587FA8B0035F4BE /* CourseList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
