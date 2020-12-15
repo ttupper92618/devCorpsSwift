@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A7AEFA425891FF400270068 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AEFA325891FF400270068 /* CloseButton.swift */; };
+		1A7AEFA525891FF400270068 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AEFA325891FF400270068 /* CloseButton.swift */; };
 		1AAFE1CF2587F77B0035F4BE /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFE1CE2587F77B0035F4BE /* CourseItem.swift */; };
 		1AAFE1D02587F77B0035F4BE /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFE1CE2587F77B0035F4BE /* CourseItem.swift */; };
 		1AAFE1E42587FA8B0035F4BE /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFE1E32587FA8B0035F4BE /* CourseList.swift */; };
@@ -47,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A7AEFA325891FF400270068 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		1AAFE1CE2587F77B0035F4BE /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		1AAFE1E32587FA8B0035F4BE /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
 		1AAFE1EA25881F870035F4BE /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -147,6 +150,7 @@
 				1AAFE1F125882AA60035F4BE /* Model */,
 				1AAFE1DE2587F9A20035F4BE /* Items */,
 				FB9D57382587CFBE00B441A9 /* CoursesView.swift */,
+				1A7AEFA325891FF400270068 /* CloseButton.swift */,
 				1AAFE1E32587FA8B0035F4BE /* CourseList.swift */,
 				FB9D56F22587BA9100B441A9 /* Assets.xcassets */,
 			);
@@ -279,7 +283,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					FB9D56F62587BA9100B441A9 = {
 						CreatedOnToolsVersion = 12.2;
@@ -359,6 +363,7 @@
 				1AAFE1EB25881F870035F4BE /* Course.swift in Sources */,
 				FB9D57402587D37600B441A9 /* Sidebar.swift in Sources */,
 				1AAFE1CF2587F77B0035F4BE /* CourseItem.swift in Sources */,
+				1A7AEFA425891FF400270068 /* CloseButton.swift in Sources */,
 				FB9D571B2587BA9100B441A9 /* ContentView.swift in Sources */,
 				FB9D57322587CA4800B441A9 /* CourseRow.swift in Sources */,
 				FB9D57192587BA9100B441A9 /* DevCorpsApp.swift in Sources */,
@@ -374,6 +379,7 @@
 				1AAFE1EC25881F870035F4BE /* Course.swift in Sources */,
 				FB9D57412587D37600B441A9 /* Sidebar.swift in Sources */,
 				1AAFE1D02587F77B0035F4BE /* CourseItem.swift in Sources */,
+				1A7AEFA525891FF400270068 /* CloseButton.swift in Sources */,
 				FB9D571C2587BA9100B441A9 /* ContentView.swift in Sources */,
 				FB9D57332587CA4800B441A9 /* CourseRow.swift in Sources */,
 				FB9D571A2587BA9100B441A9 /* DevCorpsApp.swift in Sources */,
@@ -576,6 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZP9J3449GF;
@@ -600,6 +607,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = ZP9J3449GF;
