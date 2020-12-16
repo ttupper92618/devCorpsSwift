@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct CourseDetail: View {
+    @State var showModal = false
     var course: Course = courses[0]
     var namespace: Namespace.ID
     
     #if os(iOS)
-    var cornerRadius: CGFloat = 21
+    var cornerRadius: CGFloat = 10
     #else
     var cornerRadius: CGFloat = 0
     #endif
@@ -36,6 +37,12 @@ struct CourseDetail: View {
                 VStack {
                     ForEach(courseSections) { item in
                         CourseRow(item: item)
+                            .sheet(isPresented: $showModal) {
+                                CourseSectionDetail()
+                            }
+                            .onTapGesture {
+                                showModal = true
+                            }
                         Divider()
                     }
                 }
