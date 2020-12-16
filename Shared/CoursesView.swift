@@ -12,9 +12,45 @@ struct CoursesView: View {
     @Namespace var namespace
     @State var selectedItem: Course? = nil
     @State var isDisabled = false
+    
+    #if os(iOS)
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    #endif
+    
     var body: some View {
         ZStack {
-            ScrollView {
+            #if os(iOS)
+            content
+                .navigationBarHidden(true)
+            fullContent
+                .background(VisualEffectBlur(blurStyle: .systemMaterial).edgesIgnoringSafeArea(.all))
+            #else
+            content
+            fullContent
+                .background(VisualEffectBlur().edgesIgnoringSafeArea(.all))
+            #endif
+        }
+        .navigationTitle("Courses")
+    }
+    var content: some View {
+        ScrollView {
+            VStack(spacing: 0) {
+                #if os(iOS)
+                Text("Courses")
+                    .font(.largeTitle)
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 16)
+                    .padding(.top, 54)
+                #else
+                Text("Courses")
+                    .font(.largeTitle)
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 16)
+                    .padding(.top, 0)
+                #endif
+                
                 LazyVGrid(
                     columns: [GridItem(.adaptive(minimum: 160), spacing: 16)],
                     spacing: 16
@@ -38,43 +74,44 @@ struct CoursesView: View {
                 }
                 .padding(16)
                 .frame(maxWidth: .infinity)
+                
+                Text("Latest sections")
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 240))]) {
+                    ForEach(courseSections) { item in
+                        CourseRow(item: item)
+                    }
+                }
+                .padding()
             }
-            .zIndex(1)
-            if selectedItem != nil {
-                ZStack(alignment: .topTrailing) {
-                    VStack {
-                        ScrollView {
-                            CourseItem(course: selectedItem!)
-                                .matchedGeometryEffect(id: selectedItem!.id, in: namespace)
-                                .frame(height:300)
+        }
+        .zIndex(1)
+    }
     
-                            VStack {
-                                ForEach(0 ..< 20) { item in
-                                    CourseRow()
-                                }
+    @ViewBuilder
+    var fullContent: some View {
+        if selectedItem != nil {
+            ZStack(alignment: .topTrailing) {
+                CourseDetail(course: selectedItem!, namespace: namespace)
+                
+                CloseButton()
+                    .padding(16)
+                    .onTapGesture {
+                        withAnimation(.spring()) {
+                            show.toggle()
+                            selectedItem = nil
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                                isDisabled = false
                             }
-                            .padding()
                         }
                     }
-                    .background(Color("Background 1"))
-                    .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
-                    .matchedGeometryEffect(id: "container\(selectedItem!.id)", in: namespace)
-                    .edgesIgnoringSafeArea(.all)
-                    
-                    CloseButton()
-                        .padding(.trailing, 16)
-                        .onTapGesture {
-                            withAnimation(.spring()) {
-                                show.toggle()
-                                selectedItem = nil
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                                    isDisabled = false
-                                }
-                            }
-                        }
-                }
-                .zIndex(2)
             }
+            .zIndex(2)
+            .frame(maxWidth: 712)
+            .frame(maxWidth: .infinity)
         }
     }
 }
